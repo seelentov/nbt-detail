@@ -1,0 +1,156 @@
+.modal-gallery {
+  z-index: 123;
+  display: none;
+  &.active {
+    display: flex;
+  }
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  // .modal-gallery__gallery
+  background-color: rgba(0, 0, 0, 0.81);
+
+
+  flex-direction: column;
+  justify-content: center;
+
+
+  &__gallery {
+    position: relative;
+  }
+
+  &__container {
+    position: relative;
+  }
+}
+
+.gallery {
+  position: relative;
+  height: 80vh;
+  // .gallery__btns
+
+  &__btns {
+    padding: 0 20px;
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .gallery__btns--prev
+
+  &__btns--prev {
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+
+    svg {
+      transition: all .2s ease-in-out;
+
+      fill: white;
+      width: 15px;
+      object-fit: contain;
+      rotate: -90deg;
+    }
+
+    &:hover {
+      background-color: white;
+
+      svg {
+        fill: black;
+      }
+    }
+  }
+
+  // .gallery__btns--forw
+
+  &__btns--forw {
+    cursor: pointer;
+
+    transition: all .2s ease-in-out;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+
+    svg {
+      transition: all .2s ease-in-out;
+
+      fill: white;
+      width: 15px;
+      object-fit: contain;
+      rotate: 90deg;
+    }
+
+    &:hover {
+      background-color: white;
+
+      svg {
+        fill: black;
+      }
+    }
+  }
+
+  // .gallery__swiper
+
+  &__swiper {
+    height: 100%;
+  }
+
+  &__btn-close {
+    cursor: pointer;
+    z-index: 3;
+    position: absolute;
+    top: 40px;
+    right: 24px;
+  }
+
+  &__items {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  // .gallery__item
+
+  &__item {
+    border-radius: 30px;
+    overflow: hidden;
+
+    height: 100%;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.swiper-pagination {}
